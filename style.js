@@ -26,75 +26,50 @@ document.addEventListener( 'DOMContentLoaded', function() {
       })
     }
   })
-  const but1=document.querySelector(".but00")
-  const but2=document.querySelector(".but0")
-  const but3=document.querySelector(".but1")
-  const femme=document.querySelector(".femme")
-  const homme=document.querySelector(".homme")
-  const enfant=document.querySelector(".enfant")
-  const tout=document.querySelector(".tout")
-  const spro=document.querySelector(".spro")
-  but1.addEventListener("click",clickOne)
-  function clickOne() {
-    tout.style.display="block"
-    // femme.style.display="block"
-    femme.classList.add("femme")
-    homme.style.display="none"
-    enfant.style.display="none"
-    spro.style.display="none"
-    let divButton=document.createElement("div")
-    let exit=document.createElement("button")
-    exit.textContent="Retour";
-    exit.classList.add("bout")
-    divButton.appendChild(exit)
-    tout.appendChild(divButton)
-    exit.addEventListener("click",()=>{
-    spro.style.display="block"
-    tout.style.display="none"
-    location.reload()
-    })
-  }
-  but2.addEventListener("click",clickTwo)
-  function clickTwo() {
-    tout.style.display="block"
-    // femme.style.display="block"
-    enfant.classList.add("enfant")
-    homme.style.display="none"
-    femme.style.display="none"
-    spro.style.display="none"
-    let divButton=document.createElement("div")
-    let exit=document.createElement("button")
-    exit.textContent="Retour";
-    exit.classList.add("bout")
-    divButton.appendChild(exit)
-    tout.appendChild(divButton)
-    exit.addEventListener("click",()=>{
-    spro.style.display="block"
-    tout.style.display="none"
-    location.reload()
-    })
-  }
-  but3.addEventListener("click",clickThree)
-  function clickThree() {
-    tout.style.display="block"
-    // femme.style.display="block"
-    homme.classList.add("homme")
-    enfant.style.display="none"
-    femme.style.display="none"
-    spro.style.display="none"
-    let divButton=document.createElement("div")
-    let exit=document.createElement("button")
-    exit.textContent="Retour";
-    exit.classList.add("bout")
-    divButton.appendChild(exit)
-    tout.appendChild(divButton)
-    exit.addEventListener("click",()=>{
-    spro.style.display="block"
-    tout.style.display="none"
-    location.reload()
-    })
-  }
+  const but1 = document.querySelector(".but00");
+  const but2 = document.querySelector(".but0");
+  const but3 = document.querySelector(".but1");
+  const femme = document.querySelector(".femme");
+  const homme = document.querySelector(".homme");
+  const enfant = document.querySelector(".enfant");
+  const tout = document.querySelector(".tout");
+  const spro = document.querySelector(".spro");
 
+  but1.addEventListener("click", () => check("femme"));
+  but2.addEventListener("click", () => check("enfant"));
+  but3.addEventListener("click", () => check("homme"));
+
+  function check(type) {
+      tout.style.display = "block";
+      spro.style.display = "none";
+      homme.style.display = "none";
+      femme.style.display = "none";
+      enfant.style.display = "none";
+
+      if (type === "femme") {
+          femme.style.display = "grid";
+      } else if (type === "enfant") {
+          enfant.style.display = "grid";
+      } else if (type === "homme") {
+          homme.style.display = "grid";
+      }
+
+      // Créer bouton retour s'il n'existe pas déjà
+      if (!document.querySelector(".bout")) {
+          let divButton = document.createElement("div");
+          let exit = document.createElement("button");
+          exit.textContent = "Retour";
+          exit.classList.add("bout");
+          divButton.appendChild(exit);
+          tout.appendChild(divButton);
+
+          exit.addEventListener("click", () => {
+              tout.style.display = "none";
+              spro.style.display = "block";
+              divButton.remove(); // Supprimer le bouton retour
+          });
+      }
+  }
 const btnShop=document.getElementById("carteShop");
 const cartShop=document.querySelector(".carte")
 

@@ -157,6 +157,7 @@ li img{
     display: none;
 }
 .femme{
+    display: block;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 
@@ -237,6 +238,7 @@ li img{
 }
 /* ********************************************************enfant */
 .enfant{
+    display: block;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 
@@ -289,6 +291,7 @@ li img{
 }
 /* *********************************************************homme */
 .homme{
+    display: block;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 
@@ -593,8 +596,9 @@ textarea{
         margin-left: 4.5rem;
     
     }
-    .nav ul {
+    .nav ul{
         position: fixed;
+        width: 100%;
         top: -100%;
         right: 2%;
         background-color: #f63e4e;

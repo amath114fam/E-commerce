@@ -131,7 +131,6 @@ function addClicked(event) {
   // let img=cartShop.getElementsByClassName("img");
   let imgCart=pcatShop.getElementsByClassName("image")[0].src;
   console.log(imgCart);
-  
   addCartShop(title,price,imgCart);
   updateTotal()
 }

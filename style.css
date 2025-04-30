@@ -759,6 +759,35 @@ textarea{
     margin: 0 auto;
     padding: 0 1rem;
 }
+/* ************************************************************** */
+.clientSend{
+    padding: 20px 80px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit,minmax(350px,auto));
+    gap: 1.5rem;
+}
+.client-content img{
+    height: 70px;
+    border-radius: 30%;
+}
+.client-content span .bx{
+    color: rgb(255,170,0);
+}
+.client-content{
+    padding: 20px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 2px 2px 10px 2px rgb(0, 0, 0.2);
+}
+.client-content:hover{
+    background: #a9a1a1;
+}
+.client-content p{
+    text-align: center;
+}
 /* ****************************************************************** */
 @media (max-width:728px){
     .product-title{
@@ -871,6 +900,12 @@ textarea{
     } 
 }
 @media (max-width:414px) {
+    .clientSend{
+        padding: 20px 20px;
+    }
+    .client-content{
+        margin: auto;
+    }
     footer form{
         display: flex;
         flex-direction: column;

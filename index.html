@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="screen.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="
 https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 " rel="stylesheet">
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script defer src="style.js"></script>
     <title>E-commerce</title>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-   </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
     <script type="text/javascript">
-     (function(){
-      emailjs.init({
-        publicKey: "p-VsWUfkCTOpqFwV2",
-      });
-      })();
+        (function () {
+            emailjs.init({
+                publicKey: "p-VsWUfkCTOpqFwV2",
+            });
+        })();
     </script>
 </head>
+
 <body>
     <div class="nav">
         <div id="logo"><a href=".splide">Fam Family Shop</a></div>
         <li id="burger"><i class="fa-solid fa-bars"></i></li>
+        <li id="exit"><i class="fa-solid fa-xmark"></i></li>
         <ul>
             <!-- <li id="logo"><a href=".splide">Carrefour Shop</a></li> -->
             <li><a href="#accueil">Accueil</a></li>
             <li><a href="#boutique">Boutiques</a></li>
             <li><a href="#deuxiemeTrait">Nous contacter</a></li>
-            <li><a href="#" class="fa-solid fa-cart-shopping" id="carteShop"></a></li>
+            <li><a href="#proposFam">À propos</a></li>
+            <li><a href="#" class="fa-solid fa-cart-shopping" id="carteShop"><span id="cart-icon"
+                        style="color: white; margin-left: 2px; font-size: 15px;font-weight: bold;"></span></a></li>
         </ul>
         <div class="carte">
             <h2 class="cart-title">TON PANIER</h2>
@@ -56,21 +62,19 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             <i class='bx bx-x' id="close-cart"></i>
         </div>
     </div>
-    <!-- <div class="mark">
-        <marquee behavior="" direction="">CARREFOUR SHOP,la boutique des stars</marquee>
-    </div> -->
+    
     <section class="splide" id="accueil" aria-label="Splide Basic HTML Example">
         <div class="splide__track">
-              <ul class="splide__list">
-                  <li class="splide__slide"><img src="image/istockphoto-1369227756-1024x1024.jpg" alt=""></li>
-                  <li class="splide__slide"><img src="image/istockphoto-1471478235-1024x1024.jpg" alt=""></li>
-                  <li class="splide__slide"><img src="image/b3.webp" alt=""></li>
-              </ul>
+            <ul class="splide__list">
+                <li class="splide__slide"><img src="image/istockphoto-1369227756-1024x1024.jpg" alt=""></li>
+                <li class="splide__slide"><img src="image/istockphoto-1471478235-1024x1024.jpg" alt=""></li>
+                <li class="splide__slide"><img src="image/b3.webp" alt=""></li>
+            </ul>
         </div>
     </section>
     <section class="new-arrivage" id="news">
         <div class="sectionnew">
-            <h1>Votre habillement,<span> notre préoccupation</span></h1>
+            <h1 id="deranger">Votre habillement,<span> notre préoccupation</span></h1>
         </div>
     </section>
     <section class="spro">
@@ -159,7 +163,8 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                     <div class="prix">$239</div>
                     <button class="but">Ajouter au panier</button>
                 </div>
-            </div><div class="cart">
+            </div>
+            <div class="cart">
                 <div class="img"><img src="image/w8.jpg" class="image"></div>
                 <div class="box">
                     <h2 class="product-title">Femme</h2>
@@ -309,6 +314,36 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             </div>
         </div>
     </section>
+     <section class="new-arrivage" id="news">
+        <div class="sectionnew">
+            <h1>À<span> propos</span></h1>
+        </div>
+    </section>
+    <section class="apropos" id="proposFam">
+        <div class="contentPropos">
+            <div class="proposTexte">
+                <h1>Bienvenue chez Fam Family Shop !</h1>
+                <p>Chez FamFamily Shop, nous croyons que chaque famille mérite des produits de qualité qui renforcent
+                    les liens et créent des souvenirs inoubliables. Notre boutique est dédiée à offrir une sélection
+                    soigneusement choisie d'articles qui répondent aux besoins de toutes les familles, que ce soit pour
+                    des moments de jeu, des activités éducatives ou des événements spéciaux.</p>
+            </div>
+            <div class="proposQuestion">
+                <h2>Pourquoi Nous Choisir ?</h2>
+                <ul>
+                    <li><span>Produits de Qualité </span>:Nous travaillons uniquement avec des marques réputées et des
+                        fournisseurs fiables.</li>
+                    <li><span>Service Client Exceptionnel </span>:Notre équipe est toujours prête à vous aider et à
+                        répondre à vos questions.</li>
+                    <li><span>Engagement Éthique </span>:Nous privilégions les pratiques durables et respectueuses de
+                    </li>
+                </ul>
+                <p>Nous vous invitons à explorer notre boutique et à découvrir tout ce que FamFamily Shop a à offrir.
+                    Merci de faire partie de notre aventure !</p>
+            </div>
+        </div>
+        <img src="image/g1-removebg-preview.png" alt="">
+    </section>
     <section class="new-arrivage" id="news">
         <div class="sectionnew">
             <h1>Nos<span> clients</span></h1>
@@ -324,7 +359,8 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                 <i class='bx bxs-star'></i>
                 <i class='bx bxs-star'></i>
             </span>
-            <p>"Une expérience client exceptionnelle ! Chaque étape du processus a été fluide et agréable. Merci pour votre professionnalisme et votre écoute."
+            <p>"Une expérience client exceptionnelle ! Chaque étape du processus a été fluide et agréable. Merci pour
+                votre professionnalisme et votre écoute."
             </p>
             <h2>Amath Fam</h2>
         </div>
@@ -337,7 +373,8 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                 <i class='bx bxs-star'></i>
                 <i class='bx bxs-star'></i>
             </span>
-            <p> "J'ai été ravie de la qualité du service ! L'équipe a été attentive à mes besoins et m'a fourni des conseils précieux. Je recommande vivement cette entreprise."</p>
+            <p> "J'ai été ravie de la qualité du service ! L'équipe a été attentive à mes besoins et m'a fourni des
+                conseils précieux. Je recommande vivement cette entreprise."</p>
             <h2>Cheikh Tidiane</h2>
         </div>
         <div class="client-content">
@@ -349,7 +386,8 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                 <i class='bx bxs-star'></i>
                 <i class='bx bxs-star'></i>
             </span>
-            <p>"Un excellent rapport qualité-prix. Les produits sont innovants et durables. Je n'hésiterai pas à revenir pour mes prochains achats."</p>
+            <p>"Un excellent rapport qualité-prix. Les produits sont innovants et durables. Je n'hésiterai pas à revenir
+                pour mes prochains achats."</p>
             <h2>Tokyo</h2>
         </div>
     </section>
@@ -359,55 +397,48 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
         </div>
     </section>
     <section>
-        <!-- From Uiverse.io by SnyDeTreves --> 
-     <div class="map-container">
-      <svg viewBox="0 0 500 500" class="map-background">
-        <rect style="fill: #f5f0e5" width="500" height="500"></rect>
-        <path
-        style="fill: #90daee"
-        d="M0,367.82c5.83-4.39,14.42-10.16,25.59-15.34,4.52-2.09,43.19-19.51,79.55-11.93,36.1,7.52,35.75,32.55,78.41,60.23,46.34,30.06,109.47,41.21,123.32,22.1,11.95-16.49-22.61-41.92-13.66-84.6,4.85-23.1,22.33-50.71,47.73-58.52,42.42-13.05,78.83,39.45,102.84,23.86,15.81-10.26.01-32.87,22.73-74.43,5.8-10.62,11.65-21.15,11.93-36.93.28-15.69-5.63-26.64-7.95-32.39-6.66-16.45-6.21-45.15,28.84-98.55.23,146.23.46,292.46.69,438.69H0v-132.18Z"
-      ></path>
-    </svg>
-      <div class="map-cities">
-      <div style="--x: 5; --y: 67;" class="map-city">
-        <div class="map-city__label">
-          <span data-icon="🏖️" class="map-city__sign">Plage BCEAO</span>
+        <!-- From Uiverse.io by SnyDeTreves -->
+        <div class="map-container">
+            <svg viewBox="0 0 500 500" class="map-background">
+                <rect style="fill: #f5f0e5" width="500" height="500"></rect>
+                <path style="fill: crimson"
+                    d="M0,367.82c5.83-4.39,14.42-10.16,25.59-15.34,4.52-2.09,43.19-19.51,79.55-11.93,36.1,7.52,35.75,32.55,78.41,60.23,46.34,30.06,109.47,41.21,123.32,22.1,11.95-16.49-22.61-41.92-13.66-84.6,4.85-23.1,22.33-50.71,47.73-58.52,42.42-13.05,78.83,39.45,102.84,23.86,15.81-10.26.01-32.87,22.73-74.43,5.8-10.62,11.65-21.15,11.93-36.93.28-15.69-5.63-26.64-7.95-32.39-6.66-16.45-6.21-45.15,28.84-98.55.23,146.23.46,292.46.69,438.69H0v-132.18Z">
+                </path>
+            </svg>
+            <div class="map-cities">
+                <div style="--x: 5; --y: 67;" class="map-city">
+                    <div class="map-city__label">
+                        <span data-icon="🏖️" class="map-city__sign">Plage BCEAO</span>
+                    </div>
+                </div>
+                <div style="--x: 32; --y: 32;" class="map-city">
+                    <div class="map-city__label">
+                        <span data-icon="🌷" class="map-city__sign anim anim-grow">Parcelles U22</span>
+                    </div>
+                </div>
+                <div style="--x: 58; --y: 83;" class="map-city">
+                    <div class="map-city__label">
+                        <span data-icon="🏄" class="map-city__sign anim anim-slidein">Plage Ngor</span>
+                    </div>
+                </div>
+                <div style="--x: 65; --y: 22;" class="map-city">
+                    <div class="map-city__label">
+                        <span data-icon="🏛️" class="map-city__sign">Medina</span>
+                    </div>
+                </div>
+                <div style="--x: 87; --y: 58;" class="map-city">
+                    <div class="map-city__label">
+                        <span data-icon="🎢" class="map-city__sign">Grand-Yoff</span>
+                    </div>
+                </div>
+                <div style="--x: 94; --y: 38;" class="map-city">
+                    <div class="map-city__label">
+                        <span data-icon="🌊" class="map-city__sign anim anim-slidein">Plage Guédiawaye</span>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div style="--x: 32; --y: 32;" class="map-city">
-        <div class="map-city__label">
-          <span data-icon="🌷" class="map-city__sign anim anim-grow"
-            >Parcelles U22</span
-          >
-        </div>
-      </div>
-      <div style="--x: 58; --y: 83;" class="map-city">
-        <div class="map-city__label">
-          <span data-icon="🏄" class="map-city__sign anim anim-slidein"
-            >Plage Ngor</span
-          >
-        </div>
-      </div>
-      <div style="--x: 65; --y: 22;" class="map-city">
-        <div class="map-city__label">
-          <span data-icon="🏛️" class="map-city__sign">Medina</span>
-        </div>
-      </div>
-      <div style="--x: 87; --y: 58;" class="map-city">
-        <div class="map-city__label">
-          <span data-icon="🎢" class="map-city__sign">Grand-Yoff</span>
-        </div>
-      </div>
-      <div style="--x: 94; --y: 38;" class="map-city">
-        <div class="map-city__label">
-          <span data-icon="🌊" class="map-city__sign anim anim-slidein"
-            >Plage Guédiawaye</span
-          >
-        </div>
-      </div>
-      </div>
-    </div>
-  
+
     </section>
     <section>
         <footer>
@@ -425,7 +456,8 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                     <p>E-commerce; 2025</p>
                 </div>
                 <div id="icons">
-                    <a href="https://www.linkedin.com/in/linkedin.com/in/amath-fam-178a22353"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/linkedin.com/in/amath-fam-178a22353"><i
+                            class="fa-brands fa-linkedin"></i></a>
                     <a href="https://www.facebook.com/Lucas Fam"><i class="fa-brands fa-facebook"></i></a>
                     <a href="https://www.instagram.com/lucas_jr_fam"><i class="fa-brands fa-instagram"></i></a>
                 </div>
@@ -436,4 +468,5 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
 "></script>
 </body>
+
 </html>
